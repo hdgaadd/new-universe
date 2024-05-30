@@ -20,7 +20,6 @@ public class CustomGlobalException {
             });
             return thread;
         };
-        new ThreadPoolExecutor()
         ExecutorService executor = new ThreadPoolExecutor(6,
                 6,
                 0,
@@ -34,5 +33,13 @@ public class CustomGlobalException {
         executor.execute(() -> {
             throw new NullPointerException();
         });
+        executor.notify();
     }
+
+    interface Z {
+
+    }
+
+    static class A implements Z {}
+    static class B implements Z {}
 }

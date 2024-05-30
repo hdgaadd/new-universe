@@ -27,7 +27,7 @@ public class UseReentrantLock {
             try {
                 lock.lock();
 
-                for (int i = 1; i < 27; i++) {
+                for (int i = 1; i < 4; i++) {
                     log.info(i + "");
 
                     condition1.signal();
@@ -44,7 +44,7 @@ public class UseReentrantLock {
             try {
                 lock.lock();
 
-                for (int i = 65; i < 91; i++) {
+                for (int i = 65; i < 68; i++) {
                     log.info((char) i + "");
 
                     condition0.signal();

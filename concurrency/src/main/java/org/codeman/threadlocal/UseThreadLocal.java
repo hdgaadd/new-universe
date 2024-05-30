@@ -12,7 +12,7 @@ public class UseThreadLocal {
 
     public static void main(String[] args) {
         ExecutorService es = Executors.newFixedThreadPool(20);
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 3; i++) {
             int number = i;
             es.execute(() -> System.out.println(number + ":" + new intUtil().addTen(number)));
         }
